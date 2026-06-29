@@ -1,14 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
-    /* ==========================================================================
-       THEME MANAGEMENT (DARK / LIGHT MODE)
-       ========================================================================== */
+    // Theme toggle (dark / light mode)
     const themeToggleBtn = document.getElementById('theme-toggle');
     const body = document.body;
     
-    // Check local storage for theme preference, default to dark
     const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
-    
     if (savedTheme === 'light') {
         body.classList.remove('dark-theme');
         body.classList.add('light-theme');
@@ -17,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
         body.classList.remove('light-theme');
     }
     
-    // Toggle theme click listener
     themeToggleBtn.addEventListener('click', () => {
         if (body.classList.contains('dark-theme')) {
             body.classList.remove('dark-theme');
@@ -30,9 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    /* ==========================================================================
-       MOBILE MENU DRAWER
-       ========================================================================== */
+    // Mobile menu drawer
     const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
     const mobileNav = document.getElementById('mobile-nav');
     const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
@@ -47,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     mobileMenuToggle.addEventListener('click', toggleMobileMenu);
 
-    // Close drawer when clicking a link
+    // Close menu when clicking a link
     mobileNavLinks.forEach(link => {
         link.addEventListener('click', () => {
             if (mobileNav.classList.contains('open')) {
@@ -56,52 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Close drawer when resizing screen above mobile breakpoint
+    // Close menu when window is resized to desktop width
     window.addEventListener('resize', () => {
         if (window.innerWidth > 768 && mobileNav.classList.contains('open')) {
             toggleMobileMenu();
         }
     });
-
-
-    /* ==========================================================================
-       CONTACT FORM SUBMIT (SECURE MOCK SIMULATION)
-       ========================================================================== */
-    const contactForm = document.getElementById('contact-form');
-    const formStatus = document.getElementById('form-status');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            const nameInput = document.getElementById('name').value.trim();
-            const emailInput = document.getElementById('email').value.trim();
-            const messageInput = document.getElementById('message').value.trim();
-            
-            // Basic UI loading status
-            formStatus.textContent = "Sending message securely...";
-            formStatus.className = "form-status-message"; // Reset classes
-            
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
-            submitBtn.disabled = true;
-            
-            // Mock network latency for feedback quality
-            setTimeout(() => {
-                // Clear form inputs
-                contactForm.reset();
-                submitBtn.disabled = false;
-                
-                // Show success feedback - completely secure, client-side only
-                formStatus.textContent = `Thanks, ${nameInput}! Your message was simulated successfully and details are kept secure.`;
-                formStatus.classList.add('success');
-                
-                // Reset status text after 5 seconds
-                setTimeout(() => {
-                    formStatus.textContent = "";
-                    formStatus.className = "form-status-message";
-                }, 5000);
-                
-            }, 1200);
-        });
-    }
 });
