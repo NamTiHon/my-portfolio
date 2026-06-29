@@ -63,32 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    /* ==========================================================================
-       PROJECTS GRID FILTERING
-       ========================================================================== */
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card');
-    
-    filterButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            filterButtons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            
-            const filterValue = btn.getAttribute('data-filter');
-            
-            projectCards.forEach(card => {
-                const cardCategories = card.getAttribute('data-category').split(' ');
-                
-                if (filterValue === 'all' || cardCategories.includes(filterValue)) {
-                    card.style.display = 'flex';
-                    card.style.opacity = '1';
-                    card.style.transform = 'none';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        });
-    });
 
     /* ==========================================================================
        CONTACT FORM SUBMIT (SECURE MOCK SIMULATION)
