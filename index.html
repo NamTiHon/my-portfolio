@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khanh Tran | Business Analyst Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Khanh Tran, a final-year Information Systems student and aspiring Business Analyst Intern with expertise in data visualization, system design, and database modeling.">
+    <meta name="keywords"
+        content="Business Analyst, Portfolio, Information Systems, SQL, Python, System Design, ERD, WinForms, Web Development">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Khanh Tran | Business Analyst Portfolio">
+    <meta property="og:description"
+        content="Explore projects, skills, and certifications of Khanh Tran, an aspiring Business Analyst Intern.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="dark-theme">
+
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="glass-header">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-accent">&lt;</span>Khanh.Tran<span class="logo-accent"> /&gt;</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" aria-label="Toggle Theme" class="btn-icon">
+                    <!-- Sun Icon (Light Mode) -->
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M12 2v2"></path>
+                        <path d="M12 20v2"></path>
+                        <path d="M4.93 4.93l1.41 1.41"></path>
+                        <path d="M17.66 17.66l1.41 1.41"></path>
+                        <path d="M2 12h2"></path>
+                        <path d="M20 12h2"></path>
+                        <path d="M6.34 17.66l-1.41 1.41"></path>
+                        <path d="M19.07 4.93l-1.41 1.41"></path>
+                    </svg>
+                    <!-- Moon Icon (Dark Mode) -->
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                    </svg>
+                </button>
+                <button id="mobile-menu-toggle" aria-label="Toggle Menu" class="btn-icon mobile-only">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav" class="mobile-nav-drawer">
+        <ul class="mobile-nav-links">
+            <li><a href="#about" class="mobile-nav-link">About</a></li>
+            <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+            <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+            <li><a href="#certifications" class="mobile-nav-link">Certifications</a></li>
+            <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container small-container">
+                <div class="hero-text">
+                    <span class="badge">Business Analyst Intern</span>
+                    <h1 class="hero-title">Hi, I'm <span class="gradient-text">Khanh Tran</span></h1>
+                    <h2 class="hero-subtitle">Specializing in System Analysis & Database Design</h2>
+                    <p class="hero-desc">
+                        Welcome to my portfolio! I am a final-year Information Systems student with a strong interest in
+                        Business Analysis, Product Development, and Data-driven solutions. Through analytical thinking
+                        and technical skills, I aim to translate complex requirements into robust, high-value software
+                        systems.
+                    </p>
+
+                    <div id="contact" class="hero-contact">
+                        <ul class="hero-contact-list">
+                            <li>
+                                <span class="contact-label">Email</span>
+                                <a href="mailto:khanhtran.ba@example.com"
+                                    class="hover-underline">khanhtran.ba@example.com</a>
+                            </li>
+                            <li>
+                                <span class="contact-label">LinkedIn</span>
+                                <a href="https://linkedin.com/in/khanhtran-ba" target="_blank" rel="noopener"
+                                    class="hover-underline">linkedin.com/in/khanhtran-ba</a>
+                            </li>
+                            <li>
+                                <span class="contact-label">GitHub</span>
+                                <a href="https://github.com/khanhtran-ba" target="_blank" rel="noopener"
+                                    class="hover-underline">github.com/khanhtran-ba</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section (Intro / Profile) -->
+        <section id="about" class="about-section bg-alt">
+            <div class="container small-container">
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="title-underline"></div>
+                </div>
+                <div class="about-content">
+                    <p class="paragraph-large">
+                        I am dedicated to helping teams and clients build the right software solutions. With a solid
+                        foundation in Information Systems, I combine business logic modeling (UML, Use Cases, Activity
+                        Diagrams) with backend database design (ERD, 3NF Normalization) and data visualization tools.
+                    </p>
+                    <p class="paragraph-large">
+                        My goal is to work in collaborative environments (like Scrum/Agile teams) where I can capture
+                        requirements, analyze workflows, build proof-of-concept models, and help developers and
+                        stakeholders align seamlessly.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Skills & Expertise</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="grid-container grid-3">
+                    <!-- Programming Languages Card -->
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon-box blue">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+                            </svg>
+                        </div>
+                        <h3>Programming Languages</h3>
+                        <ul class="skill-list">
+                            <li>
+                                <div class="skill-item">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-level">Pandas, NumPy, Viz (Matplotlib, Seaborn)</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-item">
+                                    <span class="skill-name">C++</span>
+                                    <span class="skill-level">Data Structures & Algorithms</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-item">
+                                    <span class="skill-name">Frontend Basics</span>
+                                    <span class="skill-level">HTML5, CSS3, JavaScript (ReactJS)</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Databases & SQL Card -->
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon-box green">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V18m0-3.75c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+                            </svg>
+                        </div>
+                        <h3>Databases & SQL</h3>
+                        <ul class="skill-list">
+                            <li>
+                                <div class="skill-item">
+                                    <span class="skill-name">Advanced SQL</span>
+                                    <span class="skill-level">Complex Joins, Stored Procedures, Triggers</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-item">
+                                    <span class="skill-name">SQL Performance</span>
+                                    <span class="skill-level">Indexing, Partitions, Optimization</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-item">
+                                    <span class="skill-name">RDBMS Engines</span>
+                                    <span class="skill-level">Microsoft SQL Server, Oracle (PL/SQL)</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Productivity & Design Card -->
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon-box purple">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
+                            </svg>
+                        </div>
+                        <h3>Productivity & Tools</h3>
+                        <ul class="skill-list">
+                            <li>
+                                <div class="skill-item">
+                                    <span class="skill-name">Project Management</span>
+                                    <span class="skill-level">Jira (Scrum boards), Notion</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-item">
+                                    <span class="skill-name">UI & Design Modeling</span>
+                                    <span class="skill-level">Figma, Draw.io (ERD, Use Case, Activity)</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-item">
+                                    <span class="skill-name">Data Visualization</span>
+                                    <span class="skill-level">PowerBI, Tableau (Report building)</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section bg-alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <!-- Filters -->
+                <div class="filter-wrapper">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="ba">Business Analysis</button>
+                    <button class="filter-btn" data-filter="dev">Web Dev / PoC</button>
+                    <button class="filter-btn" data-filter="data">Data Analysis</button>
+                </div>
+
+                <!-- Project Grid -->
+                <div class="project-grid">
+
+                    <!-- Project 1: Examination Center -->
+                    <div class="project-card glass-card" data-category="ba">
+                        <div class="project-card-header">
+                            <span class="project-badge ba">System Design</span>
+                            <span class="project-badge win">Desktop app</span>
+                        </div>
+                        <div class="project-card-body">
+                            <h3>Examination Center Management System</h3>
+                            <p class="project-desc">
+                                A comprehensive desktop application to manage exam center operations, including
+                                candidate registration, exam scheduling, score entry, and certificate issuance. Designed
+                                complete functional UML flows.
+                            </p>
+
+                            <div class="project-roles">
+                                <strong>Role:</strong> Business Analyst, WinForm Developer
+                            </div>
+
+                            <div class="tech-tags">
+                                <span class="tag">C# WinForms</span>
+                                <span class="tag">SQL Server</span>
+                                <span class="tag">Jira</span>
+                                <span class="tag">Draw.io</span>
+                                <span class="tag">Figma</span>
+                            </div>
+                        </div>
+                        <div class="project-card-footer">
+                            <a href="project-examination-system.html" class="btn btn-secondary btn-sm btn-block">View
+                                Project Details &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: SushiX -->
+                    <div class="project-card glass-card" data-category="ba dev">
+                        <div class="project-card-header">
+                            <span class="project-badge db">Database Design</span>
+                            <span class="project-badge web">Web PoC</span>
+                        </div>
+                        <div class="project-card-body">
+                            <h3>SushiX - Online Ordering Database & Platform</h3>
+                            <p class="project-desc">
+                                Business analysis and database engineering project translating restaurant requirements
+                                into an ERD and a 3NF-normalized SQL Server schema. Built a ReactJS PoC web application
+                                to validate operations.
+                            </p>
+
+                            <div class="project-roles">
+                                <strong>Role:</strong> BA, Database Designer, Web Developer
+                            </div>
+
+                            <div class="tech-tags">
+                                <span class="tag">SQL Server (3NF)</span>
+                                <span class="tag">ReactJS</span>
+                                <span class="tag">Draw.io</span>
+                                <span class="tag">Figma</span>
+                                <span class="tag">Jira</span>
+                            </div>
+                        </div>
+                        <div class="project-card-footer">
+                            <a href="project-sushix.html" class="btn btn-secondary btn-sm btn-block">View Project
+                                Details &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: TechShop -->
+                    <div class="project-card glass-card" data-category="ba dev">
+                        <div class="project-card-header">
+                            <span class="project-badge scrum">Scrum Team</span>
+                            <span class="project-badge web">Full-stack</span>
+                        </div>
+                        <div class="project-card-body">
+                            <h3>TechShop - Gadgets E-Commerce Platform</h3>
+                            <p class="project-desc">
+                                A full-stack technology gadgets store managed with Scrum methodologies. Contributed to
+                                user story creation, backlog grooming, and built responsive frontend shopping interfaces
+                                in React.
+                            </p>
+
+                            <div class="project-roles">
+                                <strong>Role:</strong> Scrum Business Analyst, Web Developer
+                            </div>
+
+                            <div class="tech-tags">
+                                <span class="tag">ReactJS</span>
+                                <span class="tag">MongoDB</span>
+                                <span class="tag">Scrum / Jira</span>
+                                <span class="tag">Figma</span>
+                                <span class="tag">Draw.io</span>
+                            </div>
+                        </div>
+                        <div class="project-card-footer">
+                            <a href="project-techshop.html" class="btn btn-secondary btn-sm btn-block">View Project
+                                Details &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: RAG Chatbot -->
+                    <div class="project-card glass-card" data-category="data dev">
+                        <div class="project-card-header">
+                            <span class="project-badge stats">Data Analytics</span>
+                            <span class="project-badge chatbot">GenAI</span>
+                        </div>
+                        <div class="project-card-body">
+                            <h3>National Exam RAG Chatbot & Dashboard</h3>
+                            <p class="project-desc">
+                                Data analytics platform visualizing the 2023 Vietnamese High School Graduation Exam
+                                scores. Structured insights via Matplotlib/Seaborn and integrated a local RAG chatbot
+                                (Flask backend) to answer queries.
+                            </p>
+
+                            <div class="project-roles">
+                                <strong>Role:</strong> Data Analyst
+                            </div>
+
+                            <div class="tech-tags">
+                                <span class="tag">Python (Pandas)</span>
+                                <span class="tag">Matplotlib / Seaborn</span>
+                                <span class="tag">Flask</span>
+                                <span class="tag">Notion</span>
+                                <span class="tag">Kaggle API</span>
+                            </div>
+                        </div>
+                        <div class="project-card-footer">
+                            <a href="project-rag-chatbot.html" class="btn btn-secondary btn-sm btn-block">View Project
+                                Details &rarr;</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Certifications</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="grid-container grid-3">
+
+                    <!-- Cert 1 -->
+                    <div class="cert-card glass-card">
+                        <div class="cert-provider">Coursera</div>
+                        <h3>Introduction to Artificial Intelligence (AI)</h3>
+                        <p class="cert-meta">Credential ID: <code class="code-font">RX1L38TCR1Q2</code></p>
+                        <p class="cert-issuer">Authorized by IBM</p>
+                        <a href="https://coursera.org/verify/RX1L38TCR1Q2" target="_blank" rel="noopener"
+                            class="btn btn-secondary btn-sm">Verify Credential</a>
+                    </div>
+
+                    <!-- Cert 2 -->
+                    <div class="cert-card glass-card">
+                        <div class="cert-provider">Coursera</div>
+                        <h3>Generative AI: Introduction and Applications</h3>
+                        <p class="cert-meta">Credential ID: <code class="code-font">XXA3VO8S7R4S</code></p>
+                        <p class="cert-issuer">Authorized by IBM</p>
+                        <a href="https://coursera.org/verify/XXA3VO8S7R4S" target="_blank" rel="noopener"
+                            class="btn btn-secondary btn-sm">Verify Credential</a>
+                    </div>
+
+                    <!-- Cert 3 -->
+                    <div class="cert-card glass-card">
+                        <div class="cert-provider">Coursera</div>
+                        <h3>Generative AI: Prompt Engineering Basics</h3>
+                        <p class="cert-meta">Credential ID: <code class="code-font">3GP1EC16RER6</code></p>
+                        <p class="cert-issuer">Authorized by IBM</p>
+                        <a href="https://coursera.org/verify/3GP1EC16RER6" target="_blank" rel="noopener"
+                            class="btn btn-secondary btn-sm">Verify Credential</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2026 Khanh Tran. All rights reserved.</p>
+            <p>Designed and built as a modern BA Portfolio website.</p>
+        </div>
+    </footer>
+
+    <!-- JS Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
